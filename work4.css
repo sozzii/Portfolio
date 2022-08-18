@@ -1,0 +1,46 @@
+.title ul{
+    width: 800px;
+    align-items: flex-start;
+}
+
+
+.section3 p:nth-of-type(1){
+    text-align: left;
+}
+
+.color{
+    width: 500px;
+}
+
+.icons{
+    width: 800px;
+}
+
+.designPage{
+    width: 900px;
+}
+
+.imgScript{
+    height: 545px;
+    margin: 100px auto;
+}
+
+.imgScript::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border: 20px solid #D9D9D9;
+    width: 900px;
+    height: 510px;
+    border-radius: 20px;
+    filter: drop-shadow(5px 0px 5px rgba(0,0,0,0.25));
+}
+
+.mockup{
+    width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
