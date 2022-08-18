@@ -54,32 +54,48 @@ $(window).on('scroll', function () {
 })
 
 //mouseover
-/*
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
+let c = {x:0,y:0,dx:0,dy:0,a:0,r:6};
+let state = true;
+canvas.width =  window.innerWidth;
+canvas.height = window.innerHeight;
 
-function mouseCursor() {
-    ctx.fillstyle = '#2A31A0';
-    ctx.arc(1000, 100, 50, 0, Math.PI * 2, false);
-    ctx.stroke();
+function cursorFn(){
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+    ctx.beginPath();
+    ctx.fillStyle = "#2A31A0";
+    ctx.globalAlpha = 0.5;
+    ctx.arc(c.x,c.y,c.r,0,Math.PI*2,false);
+    ctx.fill();
 
-    window.addEventListener('mousemove', function (e) {
-        mouseCursor(e.clientX, e.clientY);
-    })
+    requestAnimationFrame(cursorFn);
+    
 }
+cursorFn();
 
-window.addEventListener('mousemove', function (e) {
-    mouseCursor(e.clientX, e.clientY);
-})
-window.addEventListener('mouseover', function (e) {
+window.addEventListener('mousemove',function(e){
+    c.x = e.clientX + 10 ;
+    c.y = e.clientY;
+    state=true;            
+});
 
-    if (e.target.tagName == 'IMG') {
-        r = 50;  //원 크기 50
-    } else {
-        r = 10;
+window.addEventListener('mouseover',function(e){
+    if(   e.target.tagName  == 'A'  ){
+        c.r = 30;
+    }else{
+        c.r = 6;
     }
-})
-*/
+});
+
+
+
+
+
+
+
+
 
 
 //scroll > 각 섹션 title 나타나기
