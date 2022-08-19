@@ -54,7 +54,7 @@ $(window).on('scroll', function () {
 })
 
 //mouseover
-
+/*
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 let c = {x:0,y:0,dx:0,dy:0,a:0,r:6};
@@ -88,7 +88,7 @@ window.addEventListener('mouseover',function(e){
         c.r = 6;
     }
 });
-
+*/
 
 
 
